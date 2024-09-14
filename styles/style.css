@@ -1,0 +1,274 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Dosis", sans-serif;
+    background-color: #DDE6ED;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #fff;
+    color: #12372A;
+    padding: 0;
+    margin: 0;
+    text-align: justify;
+}
+
+.dark-mode {
+    background-color: #5e646a;
+    color: whitesmoke;
+}
+
+.dark-mode .jumbotron {
+    background-color: #2d3236;
+}
+
+.dark-mode nav {
+    background-color: #202427;
+}
+
+.dark-mode .navbar-container ul li a:hover {
+    color: #5e646a;
+    border-bottom: 2px solid #5e646a;
+}
+
+.dark-mode .toggle-btn:hover {
+    color: #5e646a;
+}
+
+.dark-mode .menu-toggle:hover {
+    color: #5e646a;
+}
+
+.dark-mode footer {
+    background-color: #202427;
+}
+
+.dark-mode h2,
+.dark-mode h3 {
+    color: white;
+}
+
+h2,
+h3 {
+    font-family: "Dosis", sans-serif;
+    color: #12372A;
+    font-weight: 600;
+}
+
+.jumbotron {
+    width: 100%;
+    padding: 3.5%;
+    background-color: #436850;
+    text-align: center;
+    color: white;
+}
+
+.jumbotron h1 {
+    margin-top: 2vh;
+    margin-bottom: auto;
+    font-size: 3rem;
+}
+
+.navbar-container {
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: #12372A;
+    position: sticky;
+    top: 0;
+}
+
+.navbar-container ul {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 0 3rem;
+}
+
+.navbar-container ul li a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: white;
+    transition: all;
+    transition-duration: 300ms;
+    border-bottom: 2px solid #43685000;
+}
+
+.navbar-container ul li a:hover {
+    color: #436850;
+    padding: 0.1rem;
+    border-bottom-right-radius: 5px;
+    border-bottom: 2px solid #436850;
+}
+
+.navbar-container .toggle {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-toggle {
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 4vh;
+    cursor: pointer;
+    display: none;
+    transition: all;
+    transition-duration: 300ms;
+}
+
+.menu-toggle:hover {
+    background-color: transparent;
+    color: #436850;
+}
+
+.toggle-btn {
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 4vh;
+    cursor: pointer;
+    transition: all;
+    transition-duration: 300ms;
+}
+
+.toggle-btn:hover {
+    background-color: transparent;
+    color: #436850;
+}
+
+.card {
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 1% 5%;
+}
+
+main {
+    padding: 2%;
+
+    display: flex;
+    gap: 2rem;
+}
+
+#content {
+    font-family: "Dosis", sans-serif;
+    flex: 5;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.5rem;
+}
+
+#content article section {
+    padding-left: 2%;
+}
+
+.profile header {
+    text-align: center;
+}
+
+.featured-image {
+    width: 100%;
+    max-height: 300px;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.profile img {
+    max-width: 100%;
+}
+
+aside {
+    flex: 1.5;
+}
+
+aside table{
+    width: 100%;
+}
+
+aside .link a{
+    list-style: none;
+    font-weight: bold;
+    text-decoration: none;
+    color: #12372A;
+    cursor: pointer;
+}
+
+aside .link {
+    padding: 10px;
+    text-align: center;
+}
+
+aside .link a:hover {
+    border-bottom: 2px solid #12372A;
+}
+
+.dark-mode aside .link a{
+    color: whitesmoke;
+}
+
+.dark-mode aside .link a:hover {
+    border-bottom: 2px solid whitesmoke;
+}
+
+aside section {
+    text-align: left;
+}
+
+
+header {
+    display: inline;
+}
+
+footer {
+    padding: 1px 0;
+    color: white;
+    background-color: #12372A;
+    text-align: center;
+    font-weight: bold;
+}
+
+@media only screen and (max-width:1200px) {
+    main {
+        flex-flow: column nowrap;
+    }
+
+    main aside {
+        align-self: center;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    header .navbar-container {
+        flex-wrap: wrap-reverse;
+    }
+
+    .navbar-container ul {
+        flex-direction: column;
+        margin-top: auto;
+        gap: 0.7rem 0 ;
+        display: flex;
+    }
+
+    .navbar-container ul.hidden {
+        display: none;
+    }
+
+    .navbar-container .toggle {
+        margin: 2vh 0;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #menu-toggle {
+        display: flex;
+    }
+
+    main aside {
+        align-self: stretch;
+    }
+}
